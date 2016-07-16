@@ -10,6 +10,7 @@ namespace udoma
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("boo");
         }
     }
 }
