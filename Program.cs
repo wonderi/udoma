@@ -10,7 +10,11 @@ namespace udoma
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("boo hoo hoo");
+            Console.WriteLine("Welcome to Udoma!!!");
+
+            Console.WriteLine("You Lose!");
+
+            Console.ReadLine();
         }
     }
 }
