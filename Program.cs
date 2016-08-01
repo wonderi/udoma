@@ -12,7 +12,25 @@ namespace udoma
         {
             Console.WriteLine("Welcome to Udoma!!!");
 
-            Console.WriteLine("You Lose!");
+            while (true)
+            {
+                // read command:
+                string command = Console.ReadLine();
+
+                if (command == "walk")
+                {
+                    Console.WriteLine("Walkety walk walk. You happy now!??");
+                    Console.WriteLine("Ha!");
+                }
+                else
+                {
+                    Console.WriteLine("You Lose!");
+                    break;
+                }
+
+                // show results to player
+            }
+
 
             Console.ReadLine();
         }
