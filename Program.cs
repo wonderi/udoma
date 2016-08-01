@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace udoma
 {
@@ -10,7 +11,11 @@ namespace udoma
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Udoma!!!");
+            XDocument adventureDoc = XDocument.Load("Data/adventure.xml");
+            string introductionText = adventureDoc.Root.Element("Introduction").Value;
+            string loseMessage = adventureDoc.Root.Element("LoseMessage").Value;
+
+            Console.WriteLine(introductionText);
 
             while (true)
             {
@@ -24,7 +29,7 @@ namespace udoma
                 }
                 else
                 {
-                    Console.WriteLine("You Lose!");
+                    Console.WriteLine(loseMessage);
                     break;
                 }
 

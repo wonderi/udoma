@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Adventure>
+  <Introduction>Hi there, welcome to lose, loser!</Introduction>
+  <LoseMessage>Haa-haa. You lose.</LoseMessage>
+</Adventure>
