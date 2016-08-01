@@ -17,6 +17,9 @@ namespace udoma
 
             Console.WriteLine(introductionText);
 
+            WorldState state = new WorldState();
+            WorldState state2 = new WorldState();
+
             while (true)
             {
                 // read command:
@@ -24,8 +27,16 @@ namespace udoma
 
                 if (command == "walk")
                 {
-                    Console.WriteLine("Walkety walk walk. You happy now!??");
-                    Console.WriteLine("Ha!");
+                    state.numberOfTimesWalked += 1;
+                    Console.WriteLine("You walk.");
+                    Console.WriteLine("You have walked " + state.numberOfTimesWalked + " times");
+                    Console.WriteLine("You have walked " + state2.numberOfTimesWalked + " times in alternate reality state2");
+
+                    if (state.IsWin())
+                    {
+                        Console.WriteLine("You win!");
+                        break;
+                    }
                 }
                 else
                 {
